@@ -3,6 +3,8 @@
 <head>
 	<title>Image Gallery</title>
 
+	<link rel="stylesheet" type="text/css" href="css/gallery.css" media="screen" />
+
 	<script type="text/javascript">
 		document.getElementById("a1").style.color="blue";		
 	</script>
@@ -13,12 +15,18 @@
 		var attr = which.getAttribute("href");
 		var placeholder = document.getElementById("placeholder");
 		placeholder.setAttribute("src",attr);
+
+		var text = which.getAttribute("title");
+
+		var desc = document.getElementById("desc");
+		desc.firstChild.nodeValue = text;
+
 		}
 	</script>
 </head>
 <body>
 
-<p>DOM 第4章练习</p>
+<h1>DOM 第4章练习</h1>
 <p>图片列表，点击即可切换</p>
 
 <ul>
@@ -36,5 +44,9 @@
 </ul>
 
 <img src="" id="placeholder" width="300" height="300">
+
+<p id="desc"> 请选择一个图片</p>
+
+
 </body>
 </html>
