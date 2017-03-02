@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery</title>
+
+	<script type="text/javascript">
+		document.getElementById("a1").style.color="blue";		
+	</script>
+
+	<script type="text/javascript">
+		
+		function show(which){
+		var attr = which.getAttribute("href");
+		var placeholder = document.getElementById("placeholder");
+		placeholder.setAttribute("src",attr);
+		}
+	</script>
+</head>
+<body>
+
+<p>DOM 第4章练习</p>
+<p>图片列表，点击即可切换</p>
+
+<ul>
+	<li>
+		<a id="a1" href="imgs/opluo.jpg" title="罗" onclick="show(this);return false;">罗</a>
+	</li>
+
+	<li>
+	<a href="imgs/ace.jpg" title="艾斯" onclick="show(this);return false;">艾斯</a>
+	</li>	
+	<li>
+		<a href="imgs/luffy.jpg" title="路飞" onclick="show(this);return false;">路飞</a>
+	</li>
+	<li><a href="imgs/nami.jpg" title=" 娜美" onclick="show(this);return false;">娜美</a></li>
+</ul>
+
+<img src="" id="placeholder" width="300" height="300">
+</body>
+</html>
