@@ -220,6 +220,11 @@ typeof {}; // 'object'
 - 函数内部判断某个变量是否存在用typeof myVar === 'undefined'。
 
 
+## RegExp
+
+表达式 。
+
+
 ## JSON
 
 JSON是JavaScript Object Notation的缩写，它是一种数据交换格式。
