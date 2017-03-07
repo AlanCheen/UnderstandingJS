@@ -1,6 +1,6 @@
 # JavaScript
 
-
+记录一些JS笔记。
 
 ## 变量 作用域
 
@@ -247,7 +247,9 @@ JSON.stringify(boject, null, '  '); // 输出带缩进 更好看
 
 指定只输出指定的属性 name skills ：
 
-```JSON.stringify(xiaoming, ['name', 'skills'], '  ');```
+```
+JSON.stringify(xiaoming, ['name', 'skills'], '  ');
+```
 
 还可以传入 convert 处理数据：
 
@@ -255,6 +257,103 @@ JSON.stringify(xiaoming, convert, '  ');
 
 
 反序列化 ： JSON.parse() 可以把它变成一个JS对象。
+
+## 面向对象
+
+JavaScript不区分类和实例的概念，而是通过原型（prototype）来实现面向对象编程。
+
+JavaScript的原型链和Java的Class区别就在，它没有“Class”的概念，所有对象都是实例，所谓继承关系不过是把一个对象的原型指向另一个对象而已。
+
+```
+// 原型对象:
+var Student = {
+    name: 'Robot',
+    height: 1.2,
+    run: function () {
+        console.log(this.name + ' is running...');
+    }
+};
+
+function createStudent(name) {
+    // 基于Student原型创建一个新对象:
+    var s = Object.create(Student);
+    // 初始化新对象:
+    s.name = name;
+    return s;
+}
+
+var xiaoming = createStudent('小明');
+xiaoming.run(); // 小明 is running...
+xiaoming.__proto__ === Student; // true
+```
+
+创建对象： http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/0014344997235247b53be560ab041a7b10360a567422a78000
+
+
+
+## 浏览器对象
+
+window 对象 不但充当全局作用域，而且还表示浏览器窗口。
+
+- window.innerWidth
+- window.innerHeight
+
+可以获取浏览器窗口的内部宽度和高度。内部宽高是指除去菜单栏、工具栏、边框等占位元素后，用于显示网页的净宽高。
+
+
+navigator 对象表示浏览器的信息
+
+location 对象表示当前页面的 URL 信息
+screen 
+documenet 
+
+
+## DOM 操作
+
+document.getElementById()          element
+document.getElementsByTagName()    element[]
+document.getElementsByClassName()  element[]
+
+document.querySelector()  element
+
+document.querySelectorAll()  element[]
+
+element.firstElementChild   element
+
+element.lastElementChild     element
+
+### 更新 DOM
+
+修改节点的文本，有两种方式
+
+1. 修改 `innerHTML`,非常强大，可以直接通过HTML片段修改DOM节点内部的子树。
+2. 修改`innerText`或`textContent` 属性。
+
+
+修改 CSS，通过修改 DOM 节点的`style`属性来修改，注意要将 CSS 的属性名字改成驼峰的，如：
+
+```
+var p = document.getElementById('doc');
+p.style.color = '#ff0000';
+p.style.fontSize = '20px';
+p.style.paddingTop = '2em';
+```
+
+
+## Tools
+
+[babel](https://babeljs.io/) 来支持 ES6语法。
+
+
+
+
+
+
+
+
+
+
+
 
 
 
