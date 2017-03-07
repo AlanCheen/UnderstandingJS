@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>案例研究</title>
+	<script type="text/javascript">
+		
+		function showElementCount(){
+			var body_element = getElementByTagName('body')[0];
+			var length = body_element.childNodes.length;
+			alert(length);
+		}
+	</script>
+
+
+</head>
+<body>
+
+<!-- window.onload("showElementCount()"); -->
+
+<h1>这个是标题1</h1>
+
+<a onclick="showElementCount();return false;">点我获取元素个数</a>
+
+
+<ul>
+	<ol>
+		Java
+	</ol>
+	<ol>iOS
+	</ol>
+
+	<ol>CSS</ol>
+	<ol>HTML</ol>
+	<ol>JavaScript</ol>
+</ul>
+</body>
+</html>
