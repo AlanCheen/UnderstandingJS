@@ -220,8 +220,36 @@ typeof {}; // 'object'
 - 函数内部判断某个变量是否存在用typeof myVar === 'undefined'。
 
 
+## JSON
+
+JSON是JavaScript Object Notation的缩写，它是一种数据交换格式。
+
+UTF-8 字符串规定必须用双引号"",Object的键也必须用双引号""。
+
+- number：和JavaScript的number完全一致；
+- boolean：就是JavaScript的true或false；
+- string：就是JavaScript的string；
+- null：就是JavaScript的null；
+- array：就是JavaScript的Array表示方式——[]；
+- object：就是JavaScript的{ ... }表示方式。
 
 
+序列化：JSON.stringify(boject); //可以把对象转成json 
+
+JSON.stringify(boject, null, '  '); // 输出带缩进 更好看
+
+第二个参数用于控制如何筛选对象的键值，如果我们只想输出指定的属性，可以传入Array：
+
+指定只输出指定的属性 name skills ：
+
+```JSON.stringify(xiaoming, ['name', 'skills'], '  ');```
+
+还可以传入 convert 处理数据：
+
+JSON.stringify(xiaoming, convert, '  ');
+
+
+反序列化 ： JSON.parse() 可以把它变成一个JS对象。
 
 
 
