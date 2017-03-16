@@ -114,6 +114,8 @@ arr.sort(function (x, y) {
 
 ### 闭包 Closure
 
+[闭包 (计算机科学)-wikipedia](https://zh.wikipedia.org/wiki/%E9%97%AD%E5%8C%85_(%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6))
+
 自我感觉 闭包是定义在函数内部的函数。
 
 高阶函数除了可以接受函数作为参数外，还可以把函数作为结果值返回。
@@ -344,6 +346,8 @@ p.style.paddingTop = '2em';
 
 [babel](https://babeljs.io/) 来支持 ES6语法。
 
+jquery 
+zepto 
 
 
 
