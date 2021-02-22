@@ -5,6 +5,7 @@
 ## 变量 作用域
 
 全局变量实际上被绑定到`window`的一个属性。
+
 ```
 var name = "程序亦非猿";
 alert(window.name);//程序亦非猿
@@ -341,6 +342,7 @@ p.style.fontSize = '20px';
 p.style.paddingTop = '2em';
 ```
 
+## 
 
 ## Tools
 

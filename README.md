@@ -22,7 +22,7 @@ html+css+js 实战
 
 [CSS](CSS.md)   
 [HTML](HTML.md)   
-
+[JavaScript](JavaScript.md)
 
 ## JS 知识点记录
 
